@@ -42,17 +42,16 @@ class ListNode:
         return f'Node({self.val}, {self.next})'
 
 def reverse_list(head: ListNode) -> ListNode:
-    prev = None
-    current = head
-    while current is not None:
-        next = current.next
-        current.next = prev
-        prev = current
-        current = next
-        reverse_list(next)
-    return prev
+   #Use a recursion
+    if head is None or head.next is None:
+        return head
+    reversed_head = reverse_list(head.next)
+    head.next.next = head
+    head.next = None
+    return reversed_head
+
 # debug your code below
-head = ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))
+head = ListNode(1, ListNode(2))
 print(head)
 reversed_head = reverse_list(head)
 print(reversed_head.val)
@@ -77,4 +76,6 @@ def print_without_loop(n: int, m: int):
      return
    
 print_without_loop(1 ,23)
+
+
       
