@@ -144,6 +144,7 @@ for i in range(10):
 while True:
     print("Looping forever")  # Infinite loop
 
+#IF
 if 2 > 1:
     print("2 is greater than 1")  # Condition is true
 elif 1 > 2:
@@ -178,3 +179,8 @@ with open("file.txt", "r") as file:
 # Raise an exception
 raise ValueError("Invalid value")
 
+#Try block
+try:
+    print(1 / 0)
+except ZeroDivisionError:
+    print("Cannot divide by zero")
