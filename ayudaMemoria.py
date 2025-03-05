@@ -138,3 +138,43 @@ heapq.heapify(heap)
 print(heapq.heappop(heap))  # Returns 1 (smallest element)
 
 
+for i in range(10):
+    print(i)  # Prints 0 to 9
+
+while True:
+    print("Looping forever")  # Infinite loop
+
+if 2 > 1:
+    print("2 is greater than 1")  # Condition is true
+elif 1 > 2:
+    print("1 is greater than 2")  # Condition is false
+else:
+    print("1 is equal to 2")
+
+# Define a function
+def greet(name):
+    print(f"Hello, {name}!")
+
+# Call the function
+greet("John")  # Prints "Hello, John!"
+
+# Define a class
+class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        print("Woof!")
+
+# Create an object
+dog = Dog("Buddy")
+dog.bark()  # Prints "Woof!"
+
+# Open a file
+with open("file.txt", "r") as file:
+    content = file.read()
+    print(content)
+
+# Raise an exception
+raise ValueError("Invalid value")
+
